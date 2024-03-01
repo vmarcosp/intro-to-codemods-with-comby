@@ -13,3 +13,8 @@ Diferente do convencional find e replace (com ou sem regex), codemods analisam a
 
 ## Hands on
 
+## References
+- [Site Oficial](https://comby.dev)
+- [Playground](https://comby.live)
+- [Material](https://github.com/vmarcosp/intro-to-codemods-with-comby)
+- ["Parser Parser Combinators for Program Transformation" by Rijnard van Tonder](https://www.youtube.com/watch?v=JMZLBB_BFNg&feature=emb_title)
