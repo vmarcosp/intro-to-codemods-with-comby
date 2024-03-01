@@ -1,0 +1,49 @@
+[remove-hostname-middle]
+match='''
+this.:[[clientName]].:[[methodName]]({ :[before], hostname,  :[after] })
+'''
+rewrite='''
+this.:[[clientName]].:[[methodName]]({ :[before], :[after] })
+'''
+
+[remove-hostname-end-with-comma]
+match='''
+this.:[[clientName]].:[[methodName]]({ :[before], hostname, })
+'''
+rewrite='''
+this.:[[clientName]].:[[methodName]]({ :[before] })
+'''
+
+[remove-hostname-end-no-comma]
+match='''
+this.:[[clientName]].:[[methodName]]({ :[before], hostname })
+'''
+rewrite='''
+this.:[[clientName]].:[[methodName]]({ :[before] })
+'''
+
+[remove-hostname-only-property-with-comma]
+match='''
+this.:[[clientName]].:[[methodName]]({ hostname })
+'''
+rewrite='''
+this.:[[clientName]].:[[methodName]]({})
+'''
+
+[remove-hostname-only-property-no-comma]
+match='''
+this.:[[clientName]].:[[methodName]]({
+    hostname
+})
+'''
+rewrite='''
+this.:[[clientName]].:[[methodName]]({})
+'''
+
+[remove-hostname-assigning-value]
+match='''
+this.:[[clientName]].:[[methodName]]({ :[before], hostname: :[value],  :[after] })
+'''
+rewrite='''
+this.:[[clientName]].:[[methodName]]({ :[before], :[after] })
+'''

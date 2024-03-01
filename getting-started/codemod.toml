@@ -1,0 +1,7 @@
+[improving-console]
+match='''
+console.:[method](:[args])
+'''
+rewrite='''
+console.:[method]({ :[args] })
+'''
